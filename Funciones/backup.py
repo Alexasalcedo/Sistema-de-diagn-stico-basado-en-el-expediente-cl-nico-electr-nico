@@ -45,3 +45,6 @@ def backup():
         print(f'Error: {error}')
         
     remove(path)
+    
+    # Close Firebase app
+    firebase_admin.delete_app(firebase_admin.get_app())
